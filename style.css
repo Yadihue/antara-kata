@@ -1,0 +1,280 @@
+* {
+  box-sizing: border-box;
+}
+
+.author-img {
+    width: 90px;
+    height: 110px;
+    object-fit: cover;
+    display: block;
+    margin-bottom: 20px;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f2ec;
+  color: #141414;
+  line-height: 1.5;
+}
+
+header,
+main {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+}
+
+header {
+  display: grid;
+  grid-template-columns: 180px 1fr auto;
+  gap: 32px;
+  align-items: center;
+  padding: 28px 80px 32px;
+  background-color: #f4f2ec;
+}
+
+header h1 {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 42px;
+  line-height: 1.05;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+header p {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 14px;
+  font-style: italic;
+  line-height: 1.4;
+  color: #615c52;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav a {
+  font-size: 14px;
+  color: #141414;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #732424;
+}
+
+nav li:last-child a {
+  display: inline-block;
+  padding: 12px 18px;
+  background-color: #732424;
+  color: #faf8f2;
+  white-space: nowrap;
+}
+
+main {
+    display: flex;
+    gap: 24px;
+    padding: 0 80px 56px;
+}
+
+#content {
+    flex: 1;
+    min-width: 0;
+}
+
+aside {
+    flex: 0 0 280px;
+}
+
+.featured-article {
+    display: flex;
+    margin-bottom: 32px;
+    border: 1px solid #cfc6b5;
+    background-color: #faf8f2;
+}
+
+.featured-text {
+    flex: 0 0 38%;
+    padding: 36px 28px;
+}
+
+.featured-img {
+    flex: 1;
+    width: 0;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+
+.article-meta {
+  margin: 0 0 24px;
+  font-size: 11px;
+  font-weight: bold;
+  color: #732424;
+}
+
+.featured-text h2 {
+  margin: 0 0 24px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 42px;
+  line-height: 1.08;
+  font-weight: 700;
+}
+
+.featured-text p:not(.article-meta) {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.55;
+  color: #615c52;
+}
+
+.read-more {
+  display: inline-block;
+  width: fit-content;
+  margin-top: 28px;
+  padding: 12px 20px;
+  font-size: 13px;
+  font-weight: bold;
+  background-color: #732424;
+  color: #faf8f2;
+  text-decoration: none;
+}
+
+.read-more:hover {
+  background-color: #5c1c1c;
+}
+
+aside article {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+}
+
+aside h2 {
+  margin: 0 0 16px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 17px;
+  text-transform: uppercase;
+}
+
+aside ul {
+  margin: 0 0 28px;
+  padding: 0;
+  list-style: none;
+}
+
+aside li {
+  margin-bottom: 14px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #cfc6b5;
+  font-size: 15px;
+  line-height: 1.25;
+}
+
+aside p {
+  display: inline-block;
+  margin: 0 8px 8px 0;
+  padding: 8px 12px;
+  border: 1px solid #cfc6b5;
+  font-size: 13px;
+  color: #615c52;
+}
+
+section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+section h2 {
+  grid-column: 1 / -1;
+  margin: 0;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+section article {
+  padding-top: 18px;
+  border-top: 1px solid #cfc6b5;
+}
+
+section article h3 {
+  margin: 0 0 28px;
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+section article p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #615c52;
+}
+
+footer {
+  padding: 24px;
+  text-align: center;
+  background-color: #141414;
+  color: #faf8f2;
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    display: block;
+    padding: 24px;
+  }
+
+  header h1 {
+    font-size: 34px;
+  }
+
+  header p {
+    margin: 8px 0 20px;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  main {
+    display: block;
+    padding: 0 24px 40px;
+  }
+
+  .featured-article {
+    display: block;
+  }
+
+  .featured-text {
+    padding: 24px;
+  }
+
+  .featured-text h2 {
+    font-size: 34px;
+  }
+
+  .featured-img {
+    height: auto;
+  }
+
+  aside {
+    margin-top: 32px;
+  }
+
+  section {
+    display: block;
+  }
+
+  section article {
+    margin-bottom: 24px;
+  }
+}
